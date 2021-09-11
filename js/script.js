@@ -35,9 +35,25 @@ function semuaMenu(){
 
 semuaMenu();
 
+function backup(){
+$("#backup").html(`
+                <form class="mt-6">
+                    <div class="mb-3">
+                    <h3 class="text-center mt-6">Akan segera tersedia :D</h3>
+                    <h4 class="text-center">Berikan saranmu :)</h4>
+                    <label for="exampleInputEmail" class="form-label">Alamat email:</label>
+                    <input type="email" class="form-control" id="exampleInputEmail" required>
+                    <label for="exampleInputText" class="form-label mt-4">Saran:</label>
+                    <input type="text" class="form-control" id="exampleInputText" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-4">Kirim</button>
+                </form>
+                `);
+};
 
 // navbar
 $('.nav-link').on('click',function(){
+    $('#backup').html("");
     $(".nav-link").removeClass("active");
     $(this).addClass("active");
 
@@ -73,20 +89,8 @@ $('.nav-link').on('click',function(){
                 </div>
                 `;
             }else{
-                $("#backup").html(`
-                <form class="mt-6">
-                    <div class="mb-3">
-                    <h3 class="text-center mt-6">Akan segera tersedia :D</h3>
-                    <h4 class="text-center">Berikan saranmu :)</h4>
-                    <label for="exampleInputEmail" class="form-label">Alamat email:</label>
-                    <input type="email" class="form-control" id="exampleInputEmail" required>
-                    <label for="exampleInputText" class="form-label mt-4">Saran:</label>
-                    <input type="text" class="form-control" id="exampleInputText" required>
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-4">Kirim</button>
-                </form>
-                `);
-            }
+                backup();
+            };
         });
         $("#list-menu").html(content);
     });
