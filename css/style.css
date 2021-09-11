@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+
+:root{
+    --kkRed: #e30f00;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 4px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--kkRed);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--kkRed);
+  }
+
+body {
+    font-family: 'Nunito Sans', sans-serif !important;
+}
+
+.bg-primary-color-kk {
+    background-color: var(--kkRed);
+}
+
+.text-primary-color-kk {
+    color: #e30f00;
+}
