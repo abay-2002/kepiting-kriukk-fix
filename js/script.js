@@ -1,25 +1,36 @@
-    function semuaMenu(){
-        $.getJSON("data/menu.json", function (data) {
-        let menu = data.menu;
-            $.each(menu, function (i, element) {
-                $("#list-menu").append(`
-                    <div class="col-sm-4 mx-auto my-4">
-                        <div class="card">
-                            <img src="img/menu/`+element.gambar+`" class="card-img-top">
-                            <div class="card-body">
-                            <h5 class="card-title">`+element.nama+`</h5>
-                            <h6 class="card-subtitle text-muted mt-2">Rasa: `+element.rasa+`</h6>
-                            <h6 class="card-subtitle text-muted fs-6 mt-2">Harga: `+element.harga+`</h6>
-                            <p class="card-text mt-2">`+element.deskripsi+`</p>
-                            <a href="#" class="btn btn-primary my-auto mx-auto tambah">+</a>
-                            <a href="#" class="btn btn-primary my-auto mx-auto kurang">-</a>
-                            </div>
+function semuaMenu(){
+    $.getJSON("data/menu.json", function (data) {
+    let menu = data.menu;
+        $.each(menu, function (i, element) {
+            $("#list-menu").append(`
+                <div class="col-sm-4 mx-auto my-4">
+                    <div class="card">
+                        <img src="img/menu/`+element.gambar+`" class="card-img-top">
+                        <div class="card-body">
+                        <h5 class="card-title">`+element.nama+`</h5>
+                        <h6 class="card-subtitle text-muted mt-2">Rasa: `+element.rasa+`</h6>
+                        <h6 class="card-subtitle text-muted fs-6 mt-2">Harga: `+element.harga+`</h6>
+                        <p class="card-text mt-2">`+element.deskripsi+`</p>
+                        <a href="" class="btn btn-primary my-auto mx-auto tambah">+</a>
+                        <a href="" class="btn btn-primary my-auto mx-auto kurang">-</a>
                         </div>
-                    </div>`
-                );
-            });
+                    </div>
+                </div>`
+            );
         });
-    }
+        // pengulangan dan event untuk class tambah untuk dijadikan cart
+        let tambah = $('.tambah');
+        let nilaiAwal = 0;
+        for(i=0; i<tambah.length; i++){
+            let tambahItem = $('.tambah')[i];
+            $(tambahItem).on('click',function(event){
+                event.preventDefault();
+                nilaiAwal += 1;
+                console.log(nilaiAwal);
+            });
+        }
+    });
+}
 
 
 semuaMenu();
@@ -55,8 +66,8 @@ $('.nav-link').on('click',function(){
                         <h6 class="card-subtitle text-muted mt-2">Rasa: `+element.rasa+`</h6>
                         <h6 class="card-subtitle text-muted fs-6 mt-2">Harga: `+element.harga+`</h6>
                         <p class="card-text mt-2">`+element.deskripsi+`</p>
-                        <a href="#" class="btn btn-primary my-auto mx-auto tambah">+</a>
-                        <a href="#" class="btn btn-primary my-auto mx-auto kurang">-</a>
+                        <a href="" class="btn btn-primary my-auto mx-auto tambah">+</a>
+                        <a href="" class="btn btn-primary my-auto mx-auto kurang">-</a>
                         </div>
                     </div>
                 </div>
