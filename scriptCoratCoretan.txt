@@ -1,0 +1,44 @@
+let tambah = $('.tambah-per-kategori');
+            for(i=0; i<tambah.length; i++){
+                let tambahItem = $('.tambah-per-kategori')[i];
+                $(tambahItem).on('click',function(event){
+                    event.preventDefault();
+                    nilaiAwalTotal += 1;
+                    console.log(nilaiAwalTotal);
+                });
+            };
+            let kurang = $('.kurang-per-kategori');
+            for(i=0; i<kurang.length; i++){
+                let kurangItem = $('.kurang-per-kategori')[i];
+                $(kurangItem).on('click',function(event){
+                    event.preventDefault();
+                    nilaiAwalTotal -= 1;
+                    console.log(nilaiAwalTotal);
+                });
+            };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for(i=0; i<idTambah.length; i++){
+                let eventTambah = $(`#`+i+``);
+                eventTambah.on('click',function(event){
+                    event.preventDefault();
+                    alert('tambah');
+                });
+            };

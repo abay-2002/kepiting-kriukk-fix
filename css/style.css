@@ -2,6 +2,7 @@
 
 :root{
     --kkRed: #e30f00;
+    --kkGreen : #50CB93;
 }
 
 /* width */
@@ -34,4 +35,23 @@ body {
 
 .text-primary-color-kk {
     color: #e30f00;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+
+/* TOTAL */
+#total-container {
+  background-color: var(--kkRed);
+  width: 100%;
+}
+
+#checkout {
+  background-color: var(--kkGreen);
+  border: none;
 }

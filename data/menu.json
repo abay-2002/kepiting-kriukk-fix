@@ -6,7 +6,9 @@
             "rasa":"Original",
             "harga":"Rp.15.000,00",
             "deskripsi":"Terbuat dari kepiting segar pilihan yang diolah dengan metode terbaik sehingga menghasilkan rasa gurih dan kriukk yang berkualitas juga menyehatkan.",
-            "kategori":"kepiting kriukk"
+            "kategori":"kepiting kriukk",
+            "addId":"1",
+            "removeId":"1"
         },
         {
             "gambar":"menuKepitingKriukk_02.png",
@@ -14,7 +16,9 @@
             "rasa":"Keju manis",
             "harga":"Rp.15.000,00",
             "deskripsi":"Terbuat dari kepiting segar pilihan yang diolah dengan metode terbaik sehingga menghasilkan rasa gurih dan kriukk yang berkualitas juga menyehatkan, serta manis dan gurih.",
-            "kategori":"kepiting kriukk"
+            "kategori":"kepiting kriukk",
+            "addId":"2",
+            "removeId":"2"
         },
         {
             "gambar":"menuKepitingKriukk_03.png",
@@ -22,7 +26,9 @@
             "rasa":"Ayam bawang",
             "harga":"Rp.15.000,00",
             "deskripsi":"Terbuat dari kepiting segar pilihan yang diolah dengan metode terbaik sehingga menghasilkan rasa gurih dan kriukk yang berkualitas juga menyehatkan, sekaligus rasakan kenikmatan dari bumbu rempah ayam bawang.",
-            "kategori":"kepiting kriukk"
+            "kategori":"kepiting kriukk",
+            "addId":"3",
+            "removeId":"3"
         },
         {
             "gambar":"menuKepitingKriukk_04.png",
@@ -30,7 +36,9 @@
             "rasa":"Sapi panggang",
             "harga":"Rp.15.000,00",
             "deskripsi":"Terbuat dari kepiting segar pilihan yang diolah dengan metode terbaik sehingga menghasilkan rasa gurih dan kriukk yang berkualitas juga menyehatkan, serta rasakan kenikmatan dari bumbu rempah ayam bawang.",
-            "kategori":"kepiting kriukk"
+            "kategori":"kepiting kriukk",
+            "addId":"4",
+            "removeId":"4"
         },
         {
             "gambar":"menuKepitingKriukk_05.png",
@@ -38,7 +46,9 @@
             "rasa":"Pedas manis",
             "harga":"Rp.15.000,00",
             "deskripsi":"Terbuat dari kepiting segar pilihan yang diolah dengan metode terbaik sehingga menghasilkan rasa gurih dan kriukk yang berkualitas juga menyehatkan, serta nikmati rasa pedas manis yang khas.",
-            "kategori":"kepiting kriukk"
+            "kategori":"kepiting kriukk",
+            "addId":"5",
+            "removeId":"5"
         },
         {
             "gambar":"menuKepitingKriukk_06.png",
@@ -46,7 +56,9 @@
             "rasa":"Pizza",
             "harga":"Rp.15.000,00",
             "deskripsi":"Terbuat dari kepiting segar pilihan yang diolah dengan metode terbaik sehingga menghasilkan rasa gurih dan kriukk yang berkualitas juga menyehatkan, rasakan sensi pizza ala italia berpadu gurihnya kepiting kriukk.",
-            "kategori":"kepiting kriukk"
+            "kategori":"minuman",
+            "addId":"6",
+            "removeId":"6"
         }
     ]
 }
