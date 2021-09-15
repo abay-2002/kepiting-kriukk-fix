@@ -38,10 +38,10 @@
               <a class="nav-link active" href="#">Semua menu</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Kepiting kriukk</a>
+              <a class="nav-link" href="#">Minuman</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Minuman</a>
+              <a class="nav-link" href="#">Terbaru</a>
             </li>
           </ul>
         </div>
@@ -51,21 +51,24 @@
     <main class="container mt-4 mx-auto">
         <h1 id="kategori">Semua menu</h1>
         <div class="row mx-auto" id="list-menu">
-            <!--
+            
+          <!-- 
             <div class="col-sm-4 mx-auto my-4">
-              <div class="card">
-                  <img src="img/menu/`+element.gambar+`" class="card-img-top">
-                  <div class="card-body">
-                  <h5 class="card-title">`+element.nama+`</h5>
-                  <h6 class="card-subtitle text-muted mt-2">Rasa: `+element.rasa+`</h6>
-                  <h6 class="card-subtitle text-muted fs-6 mt-2">Harga: `+element.harga+`</h6>
-                  <p class="card-text mt-2">`+element.deskripsi+`</p>
-                  <a href="#" class="btn btn-primary my-auto mx-auto tambah">+</a>
-                  <a href="#" class="btn btn-primary my-auto mx-auto kurang">-</a>
-                  </div>
-              </div>
+            <div class="card">
+                <img src="img/menu/`+element.gambar+`" class="card-img-top">
+                <div class="card-body">
+                <h5 class="card-title">`+element.nama+`</h5>
+                <h6 class="card-subtitle text-muted mt-2">Rasa: `+element.rasa+`</h6>
+                <h6 class="card-subtitle text-muted mt-2">id: `+element.addId+`</h6>
+                <h6 class="card-subtitle text-muted fs-6 mt-2">Harga: `+element.harga+`</h6>
+                <p class="card-text mt-2">`+element.deskripsi+`</p>
+                <a href="" class="btn btn-primary my-auto mx-auto tambah" id="`+element.addId+`">+</a>
+                <a href="" class="btn btn-primary my-auto mx-auto kurang" id="R`+element.removeId+`">-</a>
+                </div>
             </div>
-            -->
+            </div> 
+        -->
+           
         </div>
 
         <div id="backup" class="container mt-6"></div>
@@ -74,8 +77,9 @@
     <div class="fixed-bottom" id="total-container"> 
       <!-- <div class="container">
         <div class="row">
-          <button type="button" class="col-4 mx-auto my-2 btn btn-primary fw-bold" id="checkout">Checkout</button>
-          <p class="text-center col-4 mx-auto my-auto fw-bold text-white" id="total">Total: Rp.100.000,00</p>
+          <button type="button" class="col-3 mx-auto my-2 btn btn-primary fw-bold" id="checkout">Checkout</button>
+          <p class="text-center col-3 mx-auto my-auto fw-bold text-white" id="total">Total: Rp.100.000,00</p>
+          <p class="text-center col-3 mx-auto my-auto fw-bold text-white" id="totalQuantity">Qty:1</p>
         </div>
       </div> -->
     </div>
