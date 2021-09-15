@@ -64,7 +64,6 @@ $.getJSON('data/menu.json', function(data){
                 let idTambahPilih = $(`#`+idTambah+``);
                 idTambahPilih.on('click',function(event){
                     event.preventDefault();
-<<<<<<< HEAD
 
                     
                     
@@ -109,52 +108,6 @@ $.getJSON('data/menu.json', function(data){
 
 
 
-=======
-
-                    
-                    
-                    fixTambah = idTambahPilih[0].id;
-                    console.log("id terpilih tambah"+fixTambah);
-
-                    if(fixTambah == 0){
-                        return 0;
-                    }else if(fixTambah == 1){
-                        totalHarga1 += harga;
-                        totalQuantity1 += 1;
-                        console.log(totalHarga1);
-                    }
-                    else if(fixTambah == 2){
-                        totalHarga2 += harga;
-                        totalQuantity2 += 1;
-                        console.log(totalHarga2);
-                    }
-                    else if(fixTambah == 3){
-                        totalHarga3 += harga;
-                        totalQuantity3 += 1;
-                        console.log(totalHarga3);
-                    }
-                    else if(fixTambah == 4){
-                        totalHarga4 += harga;
-                        totalQuantity4 += 1;
-                        console.log(totalHarga4);
-                    }
-                    else if(fixTambah == 5){
-                        totalHarga5 += harga;
-                        totalQuantity5 += 1;
-                        console.log(totalHarga5);
-                    }
-                    else if(fixTambah == 6){
-                        totalHarga6 += harga;
-                        totalQuantity6 += 1;
-                        console.log(totalHarga6);
-                    }
-                    popUpCheckout();
-                });
-
-
-
-
->>>>>>> 6908355e1f930f0d862532c74102be56343a1406
                 
                 let idKurang = element.removeId;
                 let idKurangPilih = $(`#R`+idKurang+``);
@@ -317,7 +270,6 @@ $.getJSON('data/menu.json', function(data){
                     }
                     popUpCheckout();
                 });
-<<<<<<< HEAD
 
                 
                 let idKurang = element.removeId;
@@ -325,15 +277,6 @@ $.getJSON('data/menu.json', function(data){
                 idKurangPilih.on('click', function(event){
                     event.preventDefault();
 
-=======
-
-                
-                let idKurang = element.removeId;
-                let idKurangPilih = $(`#R`+idKurang+``);
-                idKurangPilih.on('click', function(event){
-                    event.preventDefault();
-
->>>>>>> 6908355e1f930f0d862532c74102be56343a1406
                     fixKurang = idKurangPilih[0].id;
                     console.log("id terpilih"+fixKurang);
                     
@@ -571,7 +514,3 @@ $.getJSON('data/menu.json', function(data){
 
 
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6908355e1f930f0d862532c74102be56343a1406
