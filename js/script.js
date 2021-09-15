@@ -279,7 +279,7 @@ $.getJSON('data/menu.json', function(data){
 
                     fixKurang = idKurangPilih[0].id;
                     console.log("id terpilih"+fixKurang);
-
+                    
                     if(fixKurang == `R`+0+``){
                         return 0;
                     }else if(fixKurang == `R`+1+``){
@@ -348,34 +348,52 @@ $.getJSON('data/menu.json', function(data){
     
 
 
+
     function popUpCheckout(){
         totalHarga = totalHarga1+totalHarga2+totalHarga3+totalHarga4+totalHarga5+totalHarga6;
         totalQuantity = totalQuantity1+totalQuantity2+totalQuantity3+totalQuantity4+totalQuantity5+totalQuantity6;
+        
+        if(totalHarga > 0){
         $('#total-container').html(`
-        <div class="container">
-            <div class="row">
-                <button type="button" class="col-3 mx-auto my-2 btn btn-primary fw-bold" id="checkout">Checkout</button>
-                <p class="text-center col-3 mx-auto my-auto fw-bold text-white" id="total">Total: Rp.`+totalHarga+`.000,00</p>
-                <p class="text-center col-3 mx-auto my-auto fw-bold text-white" id="totalQuantity">Qty:`+totalQuantity+`</p>
+            <div class="container">
+                <div class="row">
+                    <button type="button" class="col-3 mx-auto my-2 btn btn-primary fw-bold" id="checkout">Checkout</button>
+                    <p class="text-center col-3 mx-auto my-auto fw-bold text-white" id="total">Total: Rp.`+totalHarga+`.000,00</p>
+                    <p class="text-center col-3 mx-auto my-auto fw-bold text-white" id="totalQuantity">Qty:`+totalQuantity+`</p>
+                </div>
             </div>
-        </div>
-        `);
+            `);
+        }
+        else if(totalHarga == 0){
+            popUpCheckoutRemovedFix();
+        }
     }
     // popUpCheckout();
 
     function popUpCheckoutRemove(){
         totalHarga = totalHarga1+totalHarga2+totalHarga3+totalHarga4+totalHarga5+totalHarga6;
         totalQuantity = totalQuantity1+totalQuantity2+totalQuantity3+totalQuantity4+totalQuantity5+totalQuantity6;
-        $('#total-container').html(`
-        <div class="container">
-            <div class="row">
-                <button type="button" class="col-3 mx-auto my-2 btn btn-primary fw-bold" id="checkout">Checkout</button>
-                <p class="text-center col-3 mx-auto my-auto fw-bold text-white" id="total">Total: Rp.`+totalHarga+`.000,00</p>
-                <p class="text-center col-3 mx-auto my-auto fw-bold text-white" id="totalQuantity">Qty:`+totalQuantity+`</p>
-            </div>
-        </div>
-        `);
+        if(totalHarga > 0){
+            $('#total-container').html(`
+                <div class="container">
+                    <div class="row">
+                        <button type="button" class="col-3 mx-auto my-2 btn btn-primary fw-bold" id="checkout">Checkout</button>
+                        <p class="text-center col-3 mx-auto my-auto fw-bold text-white" id="total">Total: Rp.`+totalHarga+`.000,00</p>
+                        <p class="text-center col-3 mx-auto my-auto fw-bold text-white" id="totalQuantity">Qty:`+totalQuantity+`</p>
+                    </div>
+                </div>
+                `);
+        }
+        else if(totalHarga == 0){
+            popUpCheckoutRemovedFix();
+        }
+
+        
+    function popUpCheckoutRemovedFix(){
+        $('#total-container').empty();
     }
+    }
+    // popUpCheckoutRemovedFix();
 });
 
 
