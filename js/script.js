@@ -29,13 +29,10 @@ let totalQuantity6 = 0;
 
 
 $.getJSON('data/menu.json', function(data){      
-    let menu = data.menu;
-    $.each(menu, function(i,element){
-        harga = parseInt(element.harga);
-        
-
-        
-    }); 
+    // let menu = data.menu;
+    // $.each(menu, function(i,element){
+    //     harga = parseInt(element.harga);
+    // }); 
 
     function semuaMenu(){
         $.getJSON("data/menu.json", function (data) {
@@ -59,46 +56,47 @@ $.getJSON('data/menu.json', function(data){
                 );
                 // pengulangan dan event untuk button tambah dan kurang produk
 
+                let hargaFix = parseInt(element.harga);
                 
                 let idTambah = element.addId;
                 let idTambahPilih = $(`#`+idTambah+``);
                 idTambahPilih.on('click',function(event){
                     event.preventDefault();
+                    
+                    console.log(hargaFix);
 
-                    
-                    
                     fixTambah = idTambahPilih[0].id;
                     console.log("id terpilih tambah"+fixTambah);
 
                     if(fixTambah == 0){
                         return 0;
                     }else if(fixTambah == 1){
-                        totalHarga1 += harga;
+                        totalHarga1 += hargaFix;
                         totalQuantity1 += 1;
                         console.log(totalHarga1);
                     }
                     else if(fixTambah == 2){
-                        totalHarga2 += harga;
+                        totalHarga2 += hargaFix;
                         totalQuantity2 += 1;
                         console.log(totalHarga2);
                     }
                     else if(fixTambah == 3){
-                        totalHarga3 += harga;
+                        totalHarga3 += hargaFix;
                         totalQuantity3 += 1;
                         console.log(totalHarga3);
                     }
                     else if(fixTambah == 4){
-                        totalHarga4 += harga;
+                        totalHarga4 += hargaFix;
                         totalQuantity4 += 1;
                         console.log(totalHarga4);
                     }
                     else if(fixTambah == 5){
-                        totalHarga5 += harga;
+                        totalHarga5 += hargaFix;
                         totalQuantity5 += 1;
                         console.log(totalHarga5);
                     }
                     else if(fixTambah == 6){
-                        totalHarga6 += harga;
+                        totalHarga6 += hargaFix;
                         totalQuantity6 += 1;
                         console.log(totalHarga6);
                     }
@@ -114,6 +112,7 @@ $.getJSON('data/menu.json', function(data){
                 idKurangPilih.on('click', function(event){
                     event.preventDefault();
 
+                    console.log(hargaFix);
                 
                     fixKurang = idKurangPilih[0].id;
                     console.log("id terpilih"+fixKurang);
@@ -121,8 +120,8 @@ $.getJSON('data/menu.json', function(data){
                     if(fixKurang == `R`+0+``){
                         return 0;
                     }else if(fixKurang == `R`+1+``){
-                        if(totalHarga1 >= harga){
-                        totalHarga1 -= harga;
+                        if(totalHarga1 >= hargaFix){
+                        totalHarga1 -= hargaFix;
                         totalQuantity1 -= 1;
                         console.log(totalHarga1);
                         }else{
@@ -130,8 +129,8 @@ $.getJSON('data/menu.json', function(data){
                         }
                     }
                     else if(fixKurang == `R`+2+``){
-                        if(totalHarga2 >= harga){
-                            totalHarga2 -= harga;
+                        if(totalHarga2 >= hargaFix){
+                            totalHarga2 -= hargaFix;
                             totalQuantity2 -= 1;
                             console.log(totalHarga2);
                             }else{
@@ -139,8 +138,8 @@ $.getJSON('data/menu.json', function(data){
                             }
                     }
                     else if(fixKurang == `R`+3+``){
-                        if(totalHarga3 >= harga){
-                            totalHarga3 -= harga;
+                        if(totalHarga3 >= hargaFix){
+                            totalHarga3 -= hargaFix;
                             totalQuantity3 -= 1;
                             console.log(totalHarga3);
                             }else{
@@ -148,8 +147,8 @@ $.getJSON('data/menu.json', function(data){
                             }
                     }
                     else if(fixKurang == `R`+4+``){
-                        if(totalHarga4 >= harga){
-                            totalHarga4 -= harga;
+                        if(totalHarga4 >= hargaFix){
+                            totalHarga4 -= hargaFix;
                             totalQuantity4 -= 1;
                             console.log(totalHarga4);
                             }else{
@@ -157,8 +156,8 @@ $.getJSON('data/menu.json', function(data){
                             }
                     }
                     else if(fixKurang == `R`+5+``){
-                        if(totalHarga5 >= harga){
-                            totalHarga5 -= harga;
+                        if(totalHarga5 >= hargaFix){
+                            totalHarga5 -= hargaFix;
                             totalQuantity5 -= 1;
                             console.log(totalHarga5);
                             }else{
@@ -166,8 +165,8 @@ $.getJSON('data/menu.json', function(data){
                             }
                     }
                     else if(fixKurang == `R`+6+``){
-                        if(totalHarga6 >= harga){
-                            totalHarga6 -= harga;
+                        if(totalHarga6 >= hargaFix){
+                            totalHarga6 -= hargaFix;
                             totalQuantity6 -= 1;
                             console.log(totalHarga6);
                             }else{
@@ -228,43 +227,47 @@ $.getJSON('data/menu.json', function(data){
             });
             // pengulangan untuk button tambah dan kurang produk
             $.each(menu, function(i, element){
+                let hargaFix = parseInt(element.harga);
+
                 let idTambah = element.addId;
                 let idTambahPilih = $(`#`+idTambah+``);
                 idTambahPilih.on('click',function(event){
                     event.preventDefault();
                     
+                    console.log(hargaFix);
+
                     fixTambah = idTambahPilih[0].id;
                     console.log("id terpilih tambah"+fixTambah);
 
                     if(fixTambah == 0){
                         return 0;
                     }else if(fixTambah == 1){
-                        totalHarga1 += harga;
+                        totalHarga1 += hargaFix;
                         totalQuantity1 += 1;
                         console.log(totalHarga1);
                     }
                     else if(fixTambah == 2){
-                        totalHarga2 += harga;
+                        totalHarga2 += hargaFix;
                         totalQuantity2 += 1;
                         console.log(totalHarga2);
                     }
                     else if(fixTambah == 3){
-                        totalHarga3 += harga;
+                        totalHarga3 += hargaFix;
                         totalQuantity3 += 1;
                         console.log(totalHarga3);
                     }
                     else if(fixTambah == 4){
-                        totalHarga4 += harga;
+                        totalHarga4 += hargaFix;
                         totalQuantity4 += 1;
                         console.log(totalHarga4);
                     }
                     else if(fixTambah == 5){
-                        totalHarga5 += harga;
+                        totalHarga5 += hargaFix;
                         totalQuantity5 += 1;
                         console.log(totalHarga5);
                     }
                     else if(fixTambah == 6){
-                        totalHarga6 += harga;
+                        totalHarga6 += hargaFix;
                         totalQuantity6 += 1;
                         console.log(totalHarga6);
                     }
@@ -277,14 +280,16 @@ $.getJSON('data/menu.json', function(data){
                 idKurangPilih.on('click', function(event){
                     event.preventDefault();
 
+                    console.log(hargaFix);
+
                     fixKurang = idKurangPilih[0].id;
                     console.log("id terpilih"+fixKurang);
                     
                     if(fixKurang == `R`+0+``){
                         return 0;
                     }else if(fixKurang == `R`+1+``){
-                        if(totalHarga1 >= harga){
-                        totalHarga1 -= harga;
+                        if(totalHarga1 >= hargaFix){
+                        totalHarga1 -= hargaFix;
                         totalQuantity1 -= 1;
                         console.log(totalHarga1);
                         }else{
@@ -292,8 +297,8 @@ $.getJSON('data/menu.json', function(data){
                         }
                     }
                     else if(fixKurang == `R`+2+``){
-                        if(totalHarga2 >= harga){
-                            totalHarga2 -= harga;
+                        if(totalHarga2 >= hargaFix){
+                            totalHarga2 -= hargaFix;
                             totalQuantity2 -= 1;
                             console.log(totalHarga2);
                             }else{
@@ -301,8 +306,8 @@ $.getJSON('data/menu.json', function(data){
                             }
                     }
                     else if(fixKurang == `R`+3+``){
-                        if(totalHarga3 >= harga){
-                            totalHarga3 -= harga;
+                        if(totalHarga3 >= hargaFix){
+                            totalHarga3 -= hargaFix;
                             totalQuantity3 -= 1;
                             console.log(totalHarga3);
                             }else{
@@ -310,8 +315,8 @@ $.getJSON('data/menu.json', function(data){
                             }
                     }
                     else if(fixKurang == `R`+4+``){
-                        if(totalHarga4 >= harga){
-                            totalHarga4 -= harga;
+                        if(totalHarga4 >= hargaFix){
+                            totalHarga4 -= hargaFix;
                             totalQuantity4 -= 1;
                             console.log(totalHarga4);
                             }else{
@@ -319,8 +324,8 @@ $.getJSON('data/menu.json', function(data){
                             }
                     }
                     else if(fixKurang == `R`+5+``){
-                        if(totalHarga5 >= harga){
-                            totalHarga5 -= harga;
+                        if(totalHarga5 >= hargaFix){
+                            totalHarga5 -= hargaFix;
                             totalQuantity5 -= 1;
                             console.log(totalHarga5);
                             }else{
@@ -328,8 +333,8 @@ $.getJSON('data/menu.json', function(data){
                             }
                     }
                     else if(fixKurang == `R`+6+``){
-                        if(totalHarga6 >= harga){
-                            totalHarga6 -= harga;
+                        if(totalHarga6 >= hargaFix){
+                            totalHarga6 -= hargaFix;
                             totalQuantity6 -= 1;
                             console.log(totalHarga6);
                             }else{
@@ -337,8 +342,6 @@ $.getJSON('data/menu.json', function(data){
                             }
                     }
                     popUpCheckoutRemove();
-                    
-                
                     
                 });
             });
