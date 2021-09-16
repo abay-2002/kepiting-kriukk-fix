@@ -390,11 +390,10 @@ $.getJSON('data/menu.json', function(data){
         else if(totalHarga == 0){
             popUpCheckoutRemovedFix();
         }
-
-        
+    }
+       
     function popUpCheckoutRemovedFix(){
         $('#total-container').empty();
-    }
     }
     // popUpCheckoutRemovedFix();
 });
