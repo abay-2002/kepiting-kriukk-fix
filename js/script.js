@@ -6,6 +6,9 @@
 
 export default function Menu(){
 
+let fixTambah = 0;
+let fixKurang = 0;
+
 let totalHarga = 0;
 let totalQuantity = 0;
 
@@ -180,7 +183,7 @@ $.getJSON('data/menu.json', function(data){
         });
     }
 
-    semuaMenu();
+    // semuaMenu();
 
 
 

@@ -1,0 +1,11 @@
+=== halaman checkout ===
+butuh request ajax?
+butuh global variable totalHarga dan totalQuantity? ya
+
+
+
+
+apabila checkout diclick maka lakukan 
+
+export totalHarga variable, 
+totalQuantity variable
