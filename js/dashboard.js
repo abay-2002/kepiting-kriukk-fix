@@ -1,59 +1,71 @@
-
-
-export default function DashboardCall(){
-        
-    
-function dashboard(){
-    $('#dashboard').html(`
-    <div class="col-sm-4 mx-auto my-4">
-    <div class="card">
-        <img src="img/menu/" class="card-img-top">
-        <div class="card-body">
-        <h5 class="card-title">tes</h5>
-        <h6 class="card-subtitle text-muted mt-2">tes</h6>
-        <h6 class="card-subtitle text-muted mt-2">id:tes</h6>
-        <h6 class="card-subtitle text-muted fs-6 mt-2">Harga:tes</h6>
-        <p class="card-text mt-2">tes</p>
-        <a href="" class="btn btn-primary my-auto mx-auto tambah">+</a>
-        <a href="" class="btn btn-primary my-auto mx-auto kurang">-</a>
+export default function DashboardCall() {
+  function dashboard() {
+    $("#dashboard").html(`
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/carousel/first-carousel.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="img/carousel/second-carousel.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="img/carousel/first-carousel.jpg" class="d-block w-100">
+            </div>
+            <div class="carousel-item">
+                <img src="img/carousel/second-carousel.jpg" class="d-block w-100">
+            </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    </div> 
     `);
-}
+  }
 
-dashboard();       
+  dashboard();
 
+  $(".nav-link").on("click", function () {
+    
+    $("#dashboard").html("");
+    $(".nav-link").removeClass("active");
+    $(this).addClass("active");
 
-    $('.nav-link').on('click',function(){
-        $('#dashboard').html('');
-        $(".nav-link").removeClass("active");
-        $(this).addClass("active");
+    let kategori = $(this).html();
 
-        let kategori = $(this).html();
-        $("#kategori").html(kategori);
-
-        if(kategori == 'Home'){
-            $('#dashboard').html(`
-            <div class="col-sm-4 mx-auto my-4">
-            <div class="card">
-                <img src="img/menu/" class="card-img-top">
-                <div class="card-body">
-                <h5 class="card-title">tes</h5>
-                <h6 class="card-subtitle text-muted mt-2">tes</h6>
-                <h6 class="card-subtitle text-muted mt-2">id:tes</h6>
-                <h6 class="card-subtitle text-muted fs-6 mt-2">Harga:tes</h6>
-                <p class="card-text mt-2">tes</p>
-                <a href="" class="btn btn-primary my-auto mx-auto tambah">+</a>
-                <a href="" class="btn btn-primary my-auto mx-auto kurang">-</a>
+    if (kategori == "Home") {
+      $("#kategori").html('');
+      $("#dashboard").html(`
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/carousel/first-carousel.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/carousel/second-carousel.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/carousel/first-carousel.jpg" class="d-block w-100">
+                </div>
+                <div class="carousel-item">
+                    <img src="img/carousel/second-carousel.jpg" class="d-block w-100">
                 </div>
             </div>
-            </div> 
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
             `);
-        }
-    })
-
-
-
-
+    }
+  });
 }

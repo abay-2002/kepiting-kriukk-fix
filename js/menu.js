@@ -196,14 +196,16 @@ $.getJSON('data/menu.json', function(data){
         $(this).addClass("active");
 
         let kategori = $(this).html();
-        $("#kategori").html(kategori);
+        $("#kategori").html(kategori);        
 
         if (kategori == "Semua menu") {
             $("#list-menu").html("");
             semuaMenu();
             return;
+        }else if(kategori == "Home"){
+            $("#kategori").html('');
         }
-        
+
         $.getJSON("data/menu.json", function(data){
             let menu = data.menu;
             let content = "";
