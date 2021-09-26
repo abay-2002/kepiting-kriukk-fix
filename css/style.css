@@ -1,9 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
+
+
 :root{
     --kkRed: #e30f00;
     --kkGreen : #50CB93;
+    --extraBold : 800;
+    --semiBold: 600;
 }
+
+/* costum-css */
+.extra-bold{
+  font-weight: var(--extraBold);
+  font-size: 50px;
+}
+
+.semi-bold {
+  font-weight: var(--semiBold);
+}
+
+.costum-pad {
+  padding-top: 30px;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif !important;
+}
+
+/* scroll-bar */
 
 /* width */
 ::-webkit-scrollbar {
@@ -25,9 +50,6 @@
     background: var(--kkRed);
   }
 
-body {
-    font-family: 'Nunito Sans', sans-serif !important;
-}
 
 /* header */
 
@@ -60,3 +82,27 @@ body {
   background-color: var(--kkGreen);
   border: none;
 }
+
+/* DASHBOARD */
+#dashboard {
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 768px){
+  .extra-bold{
+    font-weight: var(--extraBold);
+    font-size: 35px;
+  }
+  .dashboard-img-pc {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px){
+  .dashboard-img-web {
+    display: none;
+  }
+}
+
+
+
