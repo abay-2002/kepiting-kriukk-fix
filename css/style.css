@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
 
 :root{
     --kkRed: #e30f00;
     --kkGreen : #50CB93;
     --extraBold : 800;
     --semiBold: 600;
+	--kkHTagFont: 'Rubik', sans-serif;
 }
 
 /* costum-css */
@@ -15,6 +15,12 @@
   font-weight: var(--extraBold);
   font-size: 50px;
 }
+
+h1, h2 h3, h4, h5, h6 {
+	font-family: var(--kkHTagFont);
+	font-weight: var(--extraBold);
+}
+
 
 .semi-bold {
   font-weight: var(--semiBold);
@@ -26,6 +32,7 @@
 
 body {
   font-family: 'Nunito Sans', sans-serif !important;
+  background-color: rgb(255, 255, 255);
 }
 
 /* scroll-bar */
@@ -50,12 +57,6 @@ body {
     background: var(--kkRed);
   }
 
-
-/* header */
-
-/* penutup header */
-
-
 .bg-primary-color-kk {
     background-color: var(--kkRed);
 }
@@ -66,11 +67,12 @@ body {
 
 /* NAVBAR */
 .navbar {
-  position: sticky;
-  top: 0;
   z-index: 99;
 }
 
+.navbar ul li a {
+	font-weight: var(--extraBold);
+}
 
 /* TOTAL */
 #total-container {
@@ -83,26 +85,32 @@ body {
   border: none;
 }
 
-/* DASHBOARD */
-#dashboard {
-  font-weight: 600;
+
+/* dashboard */
+/* BANNER */
+#banner {
+	height: 90vh;
+	background-image: url(../img/banner/kk-web-banner.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-@media only screen and (max-width: 768px){
-  .extra-bold{
-    font-weight: var(--extraBold);
-    font-size: 35px;
-  }
-  .dashboard-img-pc {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 768px){
-  .dashboard-img-web {
-    display: none;
-  }
+#banner .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 
+#about {
+	height: 90vh;
+}
+
+#ourwork {
+	height: 90vh;
+	background-color: rgb(250,250,250);
+
+}
 

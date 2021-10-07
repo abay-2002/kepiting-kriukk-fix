@@ -193,7 +193,7 @@ $.getJSON('data/menu.json', function(data){
     $('.nav-link').on('click',function(){
         $('#list-menu').html('');
         $(".nav-link").removeClass("active");
-        $(this).addClass("active");
+        $(this).addClass("active"); 
 
         let kategori = $(this).html();
         $("#kategori").html(kategori);        
